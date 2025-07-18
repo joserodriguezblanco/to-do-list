@@ -6,13 +6,19 @@ function TodoList({ tasks, onToggleComplete, onDelete }) {
         <ul>
             {tasks.map(task => (
                 <TodoItem 
-                    key={task.id} 
-                    task={task} 
-                    onToggleComplete={onToggleComplete} 
-                    onDelete={onDelete} 
+                    key={task.id}
+                    task={task}
+                    onToggleComplete={onToggleComplete}
+                    onDelete={onDelete}
                 />
             ))}
         </ul>
     );
 }
 export default TodoList;
+
+
+                    // key={task.id} 
+                    // task={task} 
+                    // onToggleComplete={onToggleComplete} 
+                    // onDelete={onDelete} 

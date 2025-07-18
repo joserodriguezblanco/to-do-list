@@ -4,7 +4,8 @@ function TodoForm({onAddTask}) {
     const [taskText, setTaskText] = useState('');
 
     const handleSubmit = (e) => {
-        e.prevent.default(); //previene que la página se cargue vacía
+        e.preventDefault(); // Previene que la página se recargue al enviar el formulario
+        // e.prevent.default(); //previene que la página se cargue vacía
         if (taskText.trim()){ //revisa que el texto no esté vacío
             onAddTask(taskText); //llamado a la función padre
             setTaskText('');
@@ -13,7 +14,7 @@ function TodoForm({onAddTask}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input
+            <input                
                 type="text"
                 placeholder="Añadir nueva tarea"
                 value={taskText}
