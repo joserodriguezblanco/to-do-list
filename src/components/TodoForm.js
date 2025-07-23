@@ -10,6 +10,7 @@ function TodoForm({onAddTask}) {
             onAddTask(taskText); //llamado a la función padre
             setTaskText('');
         }
+        console.log('Añandiendo tarea:', taskText);
     };
 
     return (
